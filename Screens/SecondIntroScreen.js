@@ -5,6 +5,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { FlatList } from "react-native";
 import { Dimensions } from "react-native";
 import HomeScreen from "./HomeScreen";
+import { LinearGradient } from "expo-linear-gradient";
+
 
 const { width, height } = Dimensions.get("window");
 
@@ -112,25 +114,7 @@ export default function SecondIntroScreen({navigation}) {
           paddingHorizontal: 10,
         }}
       >
-        {/* <View style={{ flexDirection: "row" }}>
-          {slides.map((_, index) => (
-            <View
-              key={index}
-              style={[
-                styles.indicator,
-                currentSlide == index && {
-                  backgroundColor: "white",
-                  width: 30,
-                  height: 3.5,
-                  backgroundColor: "white",
-                  borderRadius: 10,
-                  borderWidth: 2,
-                  borderColor: "white",
-                },
-              ]}
-            />
-          ))}
-        </View> */}
+      
       </View>
     );
   };
@@ -138,6 +122,7 @@ export default function SecondIntroScreen({navigation}) {
   const FooterBtn = () => {
     return (
       <View style={{ alignItems: "center", height: 50, marginBottom: 50 }}>
+
         {currentSlide == slides2.length - 1 ? (
           <TouchableOpacity
             style={[styles.btn2, { width: "85%" }]}
@@ -161,21 +146,27 @@ export default function SecondIntroScreen({navigation}) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
-      <FlatList
-        ref={ref}
-        data={slides2}
-        // contentContainerStyle={{ paddingHorizontal: 20, }}
-        onMomentumScrollEnd={updateCurrentSlideIndex}
-        horizontal
-        renderItem={renderItem}
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={(item) => item.id}
-        pagingEnabled
-        style={{ overflow: "visible" }}
-      />
-      {/* <Footer /> */}
-      <FooterBtn />
+      <LinearGradient
+        // colors={["#7df3ff", "#05e6fc", "#00c1d4"]}
+        colors={["#3498db", "#000428", ]}
+      >
+
+        <Header />
+        <FlatList
+          ref={ref}
+          data={slides2}
+          // contentContainerStyle={{ paddingHorizontal: 20, }}
+          onMomentumScrollEnd={updateCurrentSlideIndex}
+          horizontal
+          renderItem={renderItem}
+          showsHorizontalScrollIndicator={false}
+          keyExtractor={(item) => item.id}
+          pagingEnabled
+          style={{ overflow: "visible" }}
+        />
+        {/* <Footer /> */}
+        <FooterBtn />
+      </LinearGradient>
     </SafeAreaView>
   );
 }
@@ -183,7 +174,7 @@ export default function SecondIntroScreen({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.secondary,
+    // backgroundColor: COLORS.secondary,
     // alignItems: "center",
     // justifyContent: "center",
     // fontFamily: "Inter_900Black",
@@ -230,7 +221,7 @@ const styles = StyleSheet.create({
   btn2: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#483d8b",
+    backgroundColor: "#1e90ff",
     height: 50,
     alignItems: "center",
     borderRadius: 10,

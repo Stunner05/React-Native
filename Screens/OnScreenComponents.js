@@ -74,29 +74,6 @@ export const slides2 = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
   },
 ];
-// export const slides3 = [
-//   {
-//     id: "1",
-//     // image: require("../assets/images/onImages.png"),
-//     title: "Welcome To FixIt",
-//     subtitle:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
-//   },
-//   {
-//     id: "2",
-//     // image: require("../assets/images/onimages2.jpg"),
-//     title: "Find Services",
-//     subtitle:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
-//   },
-//   {
-//     id: "3",
-//     image: require("../assets/images/image3.png"),
-//     title: "Increase Your Value",
-//     subtitle:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure",
-//   },
-// ];
 
 const appTheme = { COLORS, slides, slides2 };
 
