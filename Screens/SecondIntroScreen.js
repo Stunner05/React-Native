@@ -157,13 +157,7 @@ export default function SecondIntroScreen({navigation}) {
       </View>
     );
   };
-  const indicator = () => {
-    return (
-      <View style={{ flexDirection: "row" }}>
-        <View style={styles.indicator} />
-      </View>
-    );
-  };
+  
 
   return (
     <SafeAreaView style={styles.container}>
