@@ -61,7 +61,7 @@ export const slides2 = [
 
   {
     id: "2",
-    image: require("../assets/images/onimages2.jpg"),
+    image: require("../assets/images/img4.png"),
     title: "Achieve Your Goals",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",

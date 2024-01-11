@@ -6,6 +6,7 @@ import { FlatList } from "react-native";
 import { Dimensions } from "react-native";
 import HomeScreen from "./HomeScreen";
 import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from "react-native";
 
 
 const { width, height } = Dimensions.get("window");
@@ -48,13 +49,9 @@ export default function SecondIntroScreen({navigation}) {
         />
         <View
           style={{
-            // justifyContent: "center",
             alignItems: "center",
-            // padding: 10 * 2,
             width: width * 0.9,
-            // marginHorizontal: 10,
-            // paddingHorizontal: 10,
-            // backgroundColor: "red"
+            
           }}
         >
           <Text style={styles.title}>{item.title}</Text>
@@ -148,10 +145,10 @@ export default function SecondIntroScreen({navigation}) {
     <SafeAreaView style={styles.container}>
       <LinearGradient
         // colors={["#7df3ff", "#05e6fc", "#00c1d4"]}
-        colors={["#3498db", "#000428", ]}
+        colors={["#3498db", "#000428"]}
       >
-
         <Header />
+        <StatusBar backgroundColor={"#3498db"}/>
         <FlatList
           ref={ref}
           data={slides2}
